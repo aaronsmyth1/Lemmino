@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+article {
+  -webkit-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+  background-color: #f1f1f1;
+  padding: 10px;
+}
+
+body {
+  background-image: url('bgImg.jpg');
+}
+.buttons {
+        display: flex;
+        align-items: center;
+        width: 100%;
+      }
+</style>
+<link rel="stylesheet" href="project.css">
+<title> Home</title>
+
+	</head>
+	<body class="Vbody">
+	
+	
+	
+
+
+	
+			<header>
+				<div class="header1"><!-- aaron making header with navigation tabs -->
+					<h1>Lemmino</h1>
+				</div>
+				<div class="header2">
+					<a href="index.html">Home</a>			
+					<a href="game.html">Game</a>
+					<a href="project.html">Gallery</a>
+				</div>
+			</header>
+			
+    
+  <form    name="RegForm"  onsubmit="return ValidationForm()" method="post" >
+      <div>
+        <label for="fName">First name:</label>
+        <input type="text" id="fName"  name="fName">
+      </div>
+      <br>
+      <div>
+        <label for="sName">Second name:</label>
+        <input type="text" id="sName"  name="sName">
+      </div>
+      <br>
+      <input type="radio" id="yes" name="ans1" value="yes">
+  <label for="yes"> I study at home</label><br>
+  <input type="radio" id="no" name="ans1" value="NO">
+  <label for="no"> I do not study at home</label><br>
+      <br>
+      <div>
+        <label>If you do, how many days a week do you study:</label>
+        <input type="number" id="time" name="time" min="0" max="7">
+          
+        
+      </div>
+      <br>
+     
+	  <label for="favcolor">Select your favorite color:</label>
+  <input type="color" id="favcolor" name="favcolor" value="#ff0000">
+  <div class="buttons">
+        <input type="submit" value="Send" name="Submit">
+        <input type="reset" value="Reset" name="Reset">
+      </div>
+    </form>
+    <script>
+      function ValidationForm() {
+        var firstName  = document.getElementById("fName");
+        var secondName = document.getElementById("sName");
+       var time2 = document.getElementById("time");
+	  var col = document.getElementById("favcolor");
+	  var r = document.getElementById('--bgc');
+	  var f = '1';
+	  var rs = getComputedStyle(r);
+        
+       
+        if(firstName.value == "") {
+          alert("Please enter your name.");
+          firstName.focus();
+          return false;
+        }
+        if(secondName.value == "") {
+          alert("Please enter a valid e-mail address.");
+          secondName.focus();
+          return false;
+        }
+        
+        
+        
+        
+        
+       if(time2.value >= 3) {
+          alert("you study enough");
+          time2.focus();
+          return false;
+        }
+       if(time2.value < 3) {
+          alert("you do not study enough");
+          time2.focus();
+          return false;
+        }
+		if(f == '1'){
+		
+		r = col;
+		}
+
+	
+  
+
+        return true;
+		
+      }
+    </script>
+	
+
+  </body>
+ </html>
+root {
+  
+  --bgc: #Ffffff;
+}
+
+form{
+margin: auto;
+width: 25%;
+background-color: var(--bgc);
+
+
+}
+-->

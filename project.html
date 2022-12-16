@@ -1,0 +1,121 @@
+<!DOCTYPE>
+	<html lang='en'>
+		<head>
+			<title>Gallery</title>
+			<link rel="stylesheet" href="project.css">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<script type="text/javascript">
+			
+			function toggleText(){	//aaron making it that when you click the images in the gallery text appears relating //
+				var x = document.getElementById("text1"); //assinging images to a variable//
+				var y = document.getElementById("text2");
+				var z = document.getElementById("text3");
+				var w = document.getElementById("text4");
+				if (x.style.display == "none") {
+					x.style.display = "block";
+				} else {
+					x.style.display = "none";
+				}
+				if (y.style.display == "none") {
+					y.style.display = "block";
+				} else {
+					y.style.display = "none";
+				}
+				if (z.style.display == "none") {
+					z.style.display = "block";
+				} else {
+					z.style.display = "none";
+				}
+				if (w.style.display == "none") {
+					w.style.display = "block";
+				} else {
+					w.style.display = "none";
+				}
+				}
+				
+				function color(x){
+					x.style.color = "#D3D3D3"
+				}					
+				
+				function noColor(x) {
+					x.style.color = "white";
+				}
+				
+				
+			
+			</script>
+		
+		</head>
+	
+		<body id="aaronbody">   <!--assigning the body to me so that the groups body css doesnt interfere with mine-->
+		
+			<header>
+				<div class="header1">	<!-- aaron making header with navigation tabs -->
+					<img id="logo" alt='logo' src="images/logo.jpeg" align="left"><h1>Lemmino</h1><p id="tagline"> When the body moves the mind grooves </p><!-- aaron lemmino , word play on let me know. Al came up with the tagline -->
+				</div>
+				<div class="header2"> <!-- aaron made this div because the brand name was pushing the urls out of the div this fixed it -->
+				
+					<a onmouseover="color(this)" onmouseout="noColor(this)" href="index.html">Home</a><!-- aaron manipulation of the dom-->
+					<a onmouseover="color(this)" onmouseout="noColor(this)"  href="game.html">Game</a>
+					<a onmouseover="color(this)" onmouseout="noColor(this)"  href="project.html">Gallery</a>
+					
+				</div>
+				
+			</header>
+			
+			<div class="box"><!-- aaron making gallery with images using divs. I wanted the divs to sit infront of the body so i could get a background image behind it-->
+				<div id="img1"> 
+					<img onclick="toggleText()" src="images/sleep.jpg" align="left" alt='person sleeping'> 
+					<h4>Good sleep</h4>
+					<br>
+					<p id="text1"> Getting a good nights sleep is a sure way to improve your grades if its paired with stuff like a study schedule and good diet. This is because your brain works a lot better when it gets the essiential eight hours. Youll be able to memorise more and for longer with increased focus and productivity </p>
+				</div>
+			
+				<div id="img2">
+					<img onclick="toggleText()" src="images/studyschedule.png" alt='a study schedule' align="right">
+					<h4> Study schedule</h4>
+					<br>
+					<p id="text2"> Making a study schedule and more importantly, sticking to it is one of the best ways to improve your marks if your studying at home. Discpline and being accountabile of times you chose to ignore your schedule is massively improve the effectiveness of this study tip</p>
+				</div>
+				<div id="img3">
+					<img onclick="toggleText()" src="images/diet.jpg" align="left" alt='healthy foods'>
+					<h4> Healthy diet </h4>
+					<br>
+					<p id="text3"> What you put into your body is also a key factor into how well you do in your tests. Eating foods with good nurtients and minerals will give your brain the energy it needs for long study sessions mazimizing information intake. If your only eating sugary and unhealthy foods this will affect your study sessions and the amount of information which you take in </p> 
+				</div>
+				<br>
+				<div id="img4">
+					<img onclick="toggleText()" src="images/exercise.jpg" align="right" alt='man running'>
+					<h4> Regular exercise </h4>
+					<br>
+					<p id="text4">Exercise is one of the most important factors too studying well. Although one might not think that exercising would affect studying it is actually proven to positively affect score results. This is because it is a good way to release stress as well as dopamine and other feel good hormones </p>
+				</div>
+				
+			</div>
+			
+			<div class="box1">
+				<p>.</p> <!--had to put this in to get the div to work -->
+			</div>
+		
+			<footer>
+			
+			<div class="leftfooter">
+				<h5> Lemmino </h5>
+				<p id="pfooter"> A website used for educational purposes and teaching tips and tricks to improve grades</p>
+			</div>
+			<div class="centerfooter">
+				<h5> Location </h5>
+				<p> Mayor Street Lower, International Financial Services Centre, Dublin 1 </p>
+				<p id="copyright">copyright 2022©</p>
+			</div>
+			<div class="rightfooter">
+				<h5> Contact Us </h5>
+				<p> Mobile: 087999999 <p>
+				<p> Email: student.ncirl.ie</p>
+			</div>	
+			
+			</footer>
+	
+		</body>
+	
+	</html>
